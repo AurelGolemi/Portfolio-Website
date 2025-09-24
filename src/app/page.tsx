@@ -1,4 +1,15 @@
+'use client';
+
 export default function Home() {
+
+  // Function to handle smooth scrolling
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <header className="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
@@ -10,15 +21,24 @@ export default function Home() {
             </div>
 
             {/* Navigation Links */}
-            <a href="#about" className="text-gray-700 hover:text-gray-900 transition-colors">
+            <div className="hidden md:flex items-center space-x-8">
+              <button
+                onClick={() => scrollToSection('about')}
+                className="text-gray-700 hover:text-gray-900 transition-colors cursor-pointer">
               About
-            </a>
-            <a href="#profile" className="text-gray-700 hover:text-gray-900 transition-colors">
+            </button>
+              <button
+                onClick={() => scrollToSection('profile')}
+                className="text-gray-700 hover:text-gray-900 transition-colors cursor-pointer">
               Profile
-            </a>
-            <a href="contact-me" className="text-gray-700 hover:text-gray-900 transition-colors">
+            </button>
+              <button
+                onClick={() => scrollToSection('contact-me')}
+                className="text-gray-700 hover:text-gray-900 transition-colors cursor-pointer">
               Contact Me
-            </a>
+            </button>
+            </div>
+            
           </div>
 
           {/* Action Buttons */}
@@ -30,9 +50,11 @@ export default function Home() {
               className="text-gray-700 hover:text-gray-900 transition-colors">
               GitHub
             </a>
-            <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors cursor-pointer">
+            <a
+              href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRtsnTGjNcmZqXgwkTdWNScLnVgsmtmbMLVrkfsFjVZxhhtrvQmqMcJqkvrNKRmJRQZhJLv"
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors cursor-pointer">
               Hire Me
-            </button>
+            </a>
           </div>
         </nav>
       </header>
@@ -49,12 +71,21 @@ export default function Home() {
               I create beautiful, functional websites using modern technologies like HTML, CSS, JavaScript and React.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 text-white px-8 py-4 ronded-lg hover:bg-blue-800 transition-colors cursor-pointer">
+              <button
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-800 transition-colors cursor-pointer">
                 View My Work
               </button>
-              <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg hover:border-gray-400 transition-colors text-lg cursor-pointer">
+              <a 
+                href="/Aurel-Golemi-CV.pdf"
+                download="Aurel-Golemi-CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg hover:border-gray-400 transition-colors text-lg cursor-pointer text-center">
+                  Download Resume
+                </a>
+              {/* <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg hover:border-gray-400 transition-colors text-lg cursor-pointer">
                 Download Resume
-              </button>
+              </button> */}
             </div>
           </div>
         </section>
@@ -152,15 +183,25 @@ export default function Home() {
                   <div className="h-48 bg-gradient-to-br from-blue-400 to-blue-600"></div>
                   <div className="p-6">
                     <h4 className="text-xl font-semibold text-gray-900 mb-2">
-                      Travel Planner
+                      Daily Tracker
                     </h4>
                     <p className="text-gray-600 mb-4">
-                      An interactive travel planning application with dynamic content and user-friendly interface for organizing trips and destinations.
+                      The Daily Tracker App is a web application built with React.js and Tailwind CSS that helps users organize and monitor their daily tasks and habits. It features task creation, progress tracking, and a clean, responsive interface designed for usability across devices.
                     </p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       <span className="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">HTML</span>
                       <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">CSS</span>
                       <span className="px-3 py-1 bg-yellow-100 text-yellow-500 text-sm rounded-full">JavaScript</span>
+                      <span className="px-3 py-1 bg-cyan-100 text-cyan-800 text-sm rounded-full">React</span>
+                      <span className="px-3 py-1 bg-violet-100 text-violet-800 text-sm rounded-full">Tailwind CSS</span>
+                    </div>
+                    <div className="flex space-x-4">
+                      <a href="my-daily-tracker.netlify.app" className="text-blue-600 hover:text-blue-800 font-medium">
+                        View Live →
+                      </a>
+                      <a href="#" className="text-gray-600 hover:text-gray-800 font-medium">
+                        View Code →
+                      </a>
                     </div>
                   </div>
                 </div>
