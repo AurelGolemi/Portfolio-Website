@@ -1,4 +1,6 @@
 'use client';
+import { useState } from 'react'
+import Image from 'next/image';
 
 export default function Home() {
 
@@ -9,6 +11,16 @@ export default function Home() {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  console.log('Modal state:', isContactModalOpen);
+
+  // Debug function
+  const handleGetInTouchClick = () => {
+    console.log('Get In Touch clicked!');
+    setIsContactModalOpen(true);
+    console.log('Modal should be open now')
+  }
 
   return (
     <div className="min-h-screen bg-white">
@@ -141,9 +153,19 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-sm border text-center">
-                  <div className="text-2xl mb-2">💻</div>
+                  <div className="text-2xl mb-2">🌀</div>
                   <h4 className="font-semibold text-gray-900 mb-2">Tailwind CSS</h4>
                   <p className="text-sm text-gray-700">Utility-First Styling</p>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-sm border text-center">
+                  <div className="text-2xl mb-2">💻</div>
+                  <h4 className="font-semibold text-gray-900 mb-2">TypeScript (Basic)</h4>
+                  <p className="text-sm text-gray-700">Static Typing & Scalable Code</p>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-sm border text-center">
+                  <div className="text-2xl mb-2">👨‍💻📱</div>
+                  <h4 className="font-semibold text-gray-900 mb-2">NextJS (Basic)</h4>
+                  <p className="text-sm text-gray-700">Server-Side Rendering & API Routes</p>
                 </div>
               </div>
             </div>
@@ -155,7 +177,14 @@ export default function Home() {
               </h3>
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                  <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-600"></div>
+                  <div className="h-48 relative overflow-hidden">
+                    <Image
+                      src="/projects/landing-page-clothing.PNG"
+                      alt="Style Accord Landing Page Screenshot"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                   <div className="p-6">
                     <h4 className="text-xl font-semibold text-gray-900 mb-2">
                       Product Landing Page (Style Accord | Clothing Brand)
@@ -172,7 +201,7 @@ export default function Home() {
                       <a href="#" className="text-blue-600 hover:text-blue-800 font-medium">
                         View Live →
                       </a>
-                      <a href="#" className="text-gray-600 hover:text-gray-800 font-medium">
+                      <a href="https://github.com/AurelGolemi/Product-Landing-Page" className="text-gray-600 hover:text-gray-800 font-medium">
                         View Code →
                       </a>
                     </div>
@@ -180,7 +209,13 @@ export default function Home() {
                 </div>
 
                 <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                  <div className="h-48 bg-gradient-to-br from-blue-400 to-blue-600"></div>
+                  <div className="h-48 relative overflow-hidden">
+                    <Image
+                      src="/projects/daily-tracker.PNG"
+                      alt="Daily Tracker Image"
+                      fill
+                      className="object-cover" />
+                  </div>
                   <div className="p-6">
                     <h4 className="text-xl font-semibold text-gray-900 mb-2">
                       Daily Tracker
@@ -199,7 +234,7 @@ export default function Home() {
                       <a href="my-daily-tracker.netlify.app" className="text-blue-600 hover:text-blue-800 font-medium">
                         View Live →
                       </a>
-                      <a href="#" className="text-gray-600 hover:text-gray-800 font-medium">
+                      <a href="https://github.com/AurelGolemi/daily-tracker" className="text-gray-600 hover:text-gray-800 font-medium">
                         View Code →
                       </a>
                     </div>
@@ -244,9 +279,15 @@ export default function Home() {
               </div>
             </div>
 
-            <button className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-800 transition-colors">
+            <button
+              onClick={handleGetInTouchClick}
+              className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-800 transition-colors cursor-pointer z-9999">
               Get In Touch
             </button>
+
+            <div className="mt-4 text-sm text-gray-500">
+              Modal State: {isContactModalOpen ? 'OPEN' : 'CLOSED'}
+            </div>
           </div>
         </section>
       </main>
@@ -286,6 +327,28 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* Simple Test Modal */}
+      {isContactModalOpen && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+          onClick={() => setIsContactModalOpen(false)}
+        >
+          <div 
+            className="bg-white p-8 rounded-lg max-w-md w-full mx-4"
+            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
+          >
+            <h3 className="text-xl font-bold mb-4 text-gray-900">Contact Modal Works!</h3>
+            <p className="mb-4 text-gray-800">If you can see this, the modal is working correctly.</p>
+            <button
+              onClick={() => setIsContactModalOpen(false)}
+              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            >
+              Close Modal
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
