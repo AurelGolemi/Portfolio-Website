@@ -78,7 +78,7 @@ export default function Home() {
         <section className="pt-24 pb-16 px-4 md:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 mt-18">
-              Hi, I'm a Web Developer
+              {"I'm a Web Developer"}
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto">
               I create beautiful, functional websites using modern technologies like HTML, CSS, JavaScript and React.
@@ -112,13 +112,13 @@ export default function Home() {
             </h2>
             <div className="prose prose-lg mx-auto text-gray-600">
               <p className="text-lg leading-relaxed mb-6">
-                I'm a passionate web developer who loves creating digital experiences that make a difference. My journey into web development started with curiosity and has grown into a deep appreciation for clean code and user-centered design.
+                {"I'm a passionate web developer who loves creating digital experiences that make a difference. My journey into web development started with curiosity and has grown into a deep appreciation for clean code and user-centered design."}
               </p>
               <p className="text-lg leading-relaxed mb-6">
                 I have successfully built several projects including a comprehensive product landing page and an interactive travel planner application. These projects taught me the importance of responsive design, user experience, and writing maintainable code.
               </p>
               <p className="text-lg leading-relaxed">
-                When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, and sharing knowledge with the developer community.
+                {"When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, and sharing knowledge with the developer community."}
               </p>
             </div>
           </div>
@@ -261,10 +261,10 @@ export default function Home() {
         <section id="contact-me" className="py-16 px-4 md:px-8 bg-blue-50">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-              Let's Work Together
+              {"Let's Work Together"}
             </h2>
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              I'm passionate about creating exceptional web experiences and would love to help bring your projects to life. Here's why you should consider working with me:
+              {"I'm passionate about creating exceptional web experiences and would love to help bring your projects to life. Here's why you should consider working with me:"}
             </p>
 
             <div className="grid md:grid-cols-3 gap-8 mb-12">
