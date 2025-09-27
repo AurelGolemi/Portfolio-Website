@@ -24,6 +24,12 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://portfolio-website-puce-seven-59.vercel.app/",
   },
+  icons: {
+    icon: [
+    { url: '/Aurel-Golemi-Logo.png', sizes: '16x16', type: 'image/png' },
+      { url: '/Aurel-Golemi-Logo.png', sizes: '32x32', type: 'image/png' }
+    ]
+  }
 }
 
 export default function RootLayout({
