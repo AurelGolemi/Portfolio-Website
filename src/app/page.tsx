@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react'
 import Image from 'next/image';
+import ContactForm from './contactForm';
 
 export default function Home() {
 
@@ -84,6 +85,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
+                onClick={() => scrollToSection('projects')}
                 className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-800 transition-colors cursor-pointer">
                 View My Work
               </button>
@@ -146,6 +148,11 @@ export default function Home() {
                   <p className="text-sm text-gray-700">ES6+ & DOM manipulation</p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-sm border text-center">
+                  <div className="text-2xl mb-2">💾</div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Git/GitHub</h4>
+                  <p className="text-sm text-gray-700">Commits & Push Projects</p>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-sm border text-center">
                   <div className="text-2xl mb-2">⚛️</div>
                   <h4 className="font-semibold text-gray-900 mb-2">React</h4>
                   <p className="text-sm text-gray-700">
@@ -167,11 +174,16 @@ export default function Home() {
                   <h4 className="font-semibold text-gray-900 mb-2">NextJS (Basic)</h4>
                   <p className="text-sm text-gray-700">Server-Side Rendering & API Routes</p>
                 </div>
+                <div className="bg-white p-6 rounded-lg shadow-sm border text-center">
+                  <div className="text-2xl mb-2">🤖</div>
+                  <h4 className="font-semibold text-gray-900 mb-2">AI & Automation</h4>
+                  <p className="text-sm text-gray-700">Prompt Engineering, AI Integrations, ChatGPT APIs</p>
+                </div>
               </div>
             </div>
 
             {/* Projects Grid */}
-            <div className="mb-16">
+            <div id="projects" className="mb-16">
               <h3 className="text-2xl font-semibold text-gray-900 mb-8 text-center">
                 Featured Projects
               </h3>
@@ -198,7 +210,7 @@ export default function Home() {
                       <span className="px-3 py-1 bg-yellow-100 text-yellow-500 text-sm rounded-full">JavaScript</span>
                     </div>
                     <div className="flex space-x-4">
-                      <a href="#" className="text-blue-600 hover:text-blue-800 font-medium">
+                      <a href="https://style-accord.netlify.app/" className="text-blue-600 hover:text-blue-800 font-medium">
                         View Live →
                       </a>
                       <a href="https://github.com/AurelGolemi/Product-Landing-Page" className="text-gray-600 hover:text-gray-800 font-medium">
@@ -231,7 +243,7 @@ export default function Home() {
                       <span className="px-3 py-1 bg-violet-100 text-violet-800 text-sm rounded-full">Tailwind CSS</span>
                     </div>
                     <div className="flex space-x-4">
-                      <a href="my-daily-tracker.netlify.app" className="text-blue-600 hover:text-blue-800 font-medium">
+                      <a href="https://my-daily-tracker.netlify.app" className="text-blue-600 hover:text-blue-800 font-medium">
                         View Live →
                       </a>
                       <a href="https://github.com/AurelGolemi/daily-tracker" className="text-gray-600 hover:text-gray-800 font-medium">
@@ -329,7 +341,12 @@ export default function Home() {
       </footer>
 
       {/* Simple Test Modal */}
-      {isContactModalOpen && (
+
+      <ContactForm
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
+      />
+      {/* {isContactModalOpen && (
         <div 
           className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
           onClick={() => setIsContactModalOpen(false)}
@@ -348,7 +365,7 @@ export default function Home() {
             </button>
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 }
