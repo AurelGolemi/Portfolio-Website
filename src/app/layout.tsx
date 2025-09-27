@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     title: "Aurel Golemi - Web Developer Portfolio",
     description: "Professional web developer specializing in modern web technologies",
     type: "website",
-    url: "https://yourdomainname.com",
+    url: "https://portfolio-website-puce-seven-59.vercel.app/",
   },
 }
 
@@ -36,6 +37,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
