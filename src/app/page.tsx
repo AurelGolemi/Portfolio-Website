@@ -61,13 +61,12 @@ export default function Home() {
               >
                 GitHub
               </a>
-              <a
+              <button
                 onClick={() => setIsContactModalOpen(true)}
                 className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors cursor-pointer"
-                target="_blank"
               >
                 Hire Me
-              </a>
+              </button>
             </div>
           </div>
         </nav>
