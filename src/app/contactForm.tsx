@@ -81,7 +81,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
             <h3 className="text-xl font-semibold text-gray-900">Send me a message</h3>
             <button
               onClick={onClose}
-              className="text-gray-400 hover:text-gray-600 text-2xl font-bold"
+              className="text-gray-400 hover:text-gray-600 text-2xl font-bold cursor-pointer"
             >
               ×
             </button>
@@ -157,14 +157,14 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
                 type="button"
                 onClick={onClose}
                 disabled={isSubmitting}
-                className="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition-colors disabled:opacity-50"
+                className="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition-colors disabled:opacity-50 cursor-pointer"
               >
                 Cancel
               </button>
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
