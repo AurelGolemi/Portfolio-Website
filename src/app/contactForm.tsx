@@ -15,6 +15,10 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: 'success' | 'error' | null;
+    message: string;
+  }>({ type: null, message: '' });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -26,27 +30,47 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: '' });
 
-    // Simulate processing time
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    // Create mailto link
-    const subject = encodeURIComponent(`Message from ${formData.name}`);
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    );
-    const mailtoLink = `mailto:golemiaurel68@gmail.com?subject=${subject}&body=${body}`;
+      const data = await response.json();
 
-    // Open email client
-    window.location.href = mailtoLink;
-
-    // Reset form
-    setFormData({ name: '', email: '', message: '' });
-    setIsSubmitting(false);
-    onClose();
+      if (response.ok) {
+        setSubmitStatus({
+          type: 'success',
+          message: 'Thank you! Your message has been sent successfully.'
+        });
+        // Reset form
+        setFormData({ name: '', email: '', message: '' });
+        // Close modal after 2 seconds
+        setTimeout(() => {
+          onClose();
+          setSubmitStatus({ type: null, message: '' });
+        }, 2000);
+      } else {
+        setSubmitStatus({
+          type: 'error',
+          message: data.error || 'Failed to send message. Please try again.'
+        });
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Network error. Please check your connection and try again.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
-  // Don't render anything if not open
   if (!isOpen) return null;
 
   return (
@@ -62,6 +86,19 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
               ×
             </button>
           </div>
+
+          {/* Success/Error Message */}
+          {submitStatus.type && (
+            <div
+              className={`mb-4 p-3 rounded-md ${
+                submitStatus.type === 'success'
+                  ? 'bg-green-50 text-green-800 border border-green-200'
+                  : 'bg-red-50 text-red-800 border border-red-200'
+              }`}
+            >
+              {submitStatus.message}
+            </div>
+          )}
           
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
@@ -75,7 +112,8 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
                 required
                 value={formData.name}
                 onChange={handleInputChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900"
+                disabled={isSubmitting}
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:bg-gray-100"
                 placeholder="Your full name"
               />
             </div>
@@ -91,7 +129,8 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
                 required
                 value={formData.email}
                 onChange={handleInputChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900"
+                disabled={isSubmitting}
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:bg-gray-100"
                 placeholder="your.email@example.com"
               />
             </div>
@@ -107,7 +146,8 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
                 rows={4}
                 value={formData.message}
                 onChange={handleInputChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900"
+                disabled={isSubmitting}
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:bg-gray-100"
                 placeholder="Tell me about your project..."
               />
             </div>
@@ -116,14 +156,15 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
               <button
                 type="button"
                 onClick={onClose}
-                className="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition-colors cursor-pointer"
+                disabled={isSubmitting}
+                className="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition-colors disabled:opacity-50"
               >
                 Cancel
               </button>
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+                className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
