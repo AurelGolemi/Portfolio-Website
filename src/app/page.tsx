@@ -670,7 +670,7 @@ export default function Home() {
                 </li>
                 <li>
                   <a
-                    href="mailto:golemiaurel68@gmail.com"
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=golemiaurel68@gmail.com"
                     className="text-gray-300 hover:text-white transition-colors"
                   >
                     Gmail
