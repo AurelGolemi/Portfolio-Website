@@ -188,7 +188,7 @@ export default function Home() {
         <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl transform group-hover:scale-105 transition-transform duration-300">
           {/* Replace with your actual image */}
           <Image 
-            src="/Aurel_Golemi.jpg" 
+            src="/Aurel_Golemi_New.jpg" 
             alt="Aurel Golemi"
             width={700}
             height={700}
