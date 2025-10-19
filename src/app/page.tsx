@@ -550,7 +550,7 @@ export default function Home() {
                       Athens House Of Myths (Wordpress | Elementor - Edited)
                     </h4>
                     <p className="text-gray-700 mb-4">
-                      Edited and customized the Athens House of Myths website using the basic tools of WordPress and Elementor to improve its layout, design, and functionality.
+                      Improved site navigation and user experience by linking all pages, and built individual room pages from a master homepage layout using WordPress and Elementor.
                     </p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">
