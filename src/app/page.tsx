@@ -90,7 +90,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto text-center z-10">
             <div className="inline-block mb-4">
               <span className="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                Available for Internships
+                Available for Internships/Jobs
               </span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
@@ -531,6 +531,41 @@ export default function Home() {
                         className="text-gray-600 hover:text-gray-800 font-medium"
                       >
                         View Code →
+                      </a>
+                    </div>
+                  </div>
+                  </div>
+                  
+                <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                  <div className="h-48 relative overflow-hidden">
+                    <Image
+                      src="/projects/athens-house-of-myths-image.jpeg"
+                      alt="Style Accord Landing Page Screenshot"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h4 className="text-xl font-semibold text-gray-900 mb-2">
+                      Athens House Of Myths (Wordpress | Elementor - Edited)
+                    </h4>
+                    <p className="text-gray-700 mb-4">
+                      Edited and customized the Athens House of Myths website using the basic tools of WordPress and Elementor to improve its layout, design, and functionality.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">
+                        WordPress
+                      </span>
+                      <span className="px-3 py-1 bg-pink-100 text-pink-500 text-sm rounded-full">
+                        Elementor
+                      </span>
+                    </div>
+                    <div className="flex space-x-4">
+                      <a
+                        href="https://athenshouseofmyths.com/"
+                        className="text-blue-600 hover:text-blue-800 font-medium"
+                      >
+                        View Live →
                       </a>
                     </div>
                   </div>
