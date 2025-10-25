@@ -90,7 +90,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto text-center z-10">
             <div className="inline-block mb-4">
               <span className="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                Available for Internships/Jobs
+                Available for Jobs
               </span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
@@ -100,7 +100,7 @@ export default function Home() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-              I craft beautiful, functional websites using modern technologies
+              I craft beautiful, functional websites using core & modern technologies
               like
               <span className="font-semibold text-red-600">
                 {" "}
@@ -288,12 +288,14 @@ export default function Home() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="bg-white p-6 rounded-lg shadow-sm border text-center">
                     <div className="flex gap-2 justify-center mb-3">
+                      {/* HTML Logo */}
                       <svg viewBox="0 0 452 520" className="w-10 h-10">
                         <path fill="#e34f26" d="M41 460L0 0h451l-41 460-185 52"/>
                         <path fill="#ef652a" d="M226 472l149-41 35-394H226"/>
                         <path fill="#ecedee" d="M226 208h-75l-5-58h80V94H84l15 171h127zm0 147l-64-17-4-45h-56l7 89 117 32z"/>
                         <path fill="#fff" d="M226 265h69l-7 73-62 17v59l115-32 16-174H226zm0-171v56h136l5-56z"/>
                       </svg>
+                      {/* CSS Logo */}
                       <svg viewBox="0 0 452 520"
                         className="w-10 h-10"
                         xmlns="http://www.w3.org/2000/svg">
@@ -302,31 +304,22 @@ export default function Home() {
                         <path fill="#EBEBEB" d="M124.46 208.59l5.065 56.517H256V208.59zM119.419 150.715H256V94.197H114.281zM256 355.372l-.248.066-62.944-16.996-4.023-45.076h-56.736l7.919 88.741 115.772 32.14.26-.073z"/>
                         <path fill="#FFF" d="M255.805 208.59v56.517H325.4l-6.56 73.299-63.035 17.013v58.8l115.864-32.112.85-9.549 13.28-148.792 1.38-15.176 10.203-114.393H255.805v56.518h79.639L330.3 208.59z"/>
                       </svg>
-                  </div>
-                  <h4 className="font-semibold text-gray-900 mb-2">HTML/CSS</h4>
-                  <p className="text-sm text-gray-700">
-                    Semantic Markup & Modern Styling
-                  </p>
-                </div>
-                <div className="bg-white p-6 rounded-lg shadow-sm border text-center">
-                    <div className="w-12 h-12 mx-auto mb-3">
-                      <svg viewBox="0 0 256 256" className="w-full h-full">
+                      {/* JavaScript Logo */}
+                        <svg viewBox="0 0 256 256" className="w-10 h-10">
                         <rect width="256" height="256" fill="#F7DF1E"/>
                         <path d="M67.312 213.932l19.59-11.856c3.78 6.701 7.218 12.371 15.465 12.371 7.905 0 12.89-3.092 12.89-15.12v-81.798h24.057v82.138c0 24.917-14.606 36.259-35.916 36.259-19.245 0-30.416-9.967-36.087-21.996M152.381 211.354l19.588-11.341c5.157 8.421 11.859 14.607 23.715 14.607 9.969 0 16.325-4.984 16.325-11.858 0-8.248-6.53-11.17-17.528-15.98l-6.013-2.58c-17.357-7.387-28.87-16.667-28.87-36.257 0-18.044 13.747-31.792 35.228-31.792 15.294 0 26.292 5.328 34.196 19.247l-18.732 12.03c-4.125-7.389-8.591-10.31-15.465-10.31-7.046 0-11.514 4.468-11.514 10.31 0 7.217 4.468 10.14 14.778 14.608l6.014 2.577c20.45 8.765 31.963 17.7 31.963 37.804 0 21.654-17.012 33.51-39.867 33.51-22.339 0-36.774-10.654-43.819-24.574"/>
                       </svg>
                   </div>
-                  <h4 className="font-semibold text-gray-900 mb-2">
-                    JavaScript
-                  </h4>
+                  <h4 className="font-semibold text-gray-900 mb-2">Core Web Technologies</h4>
                   <p className="text-sm text-gray-700">
-                    ES6+ & DOM manipulation
+                    HTML5, CSS3, JavaScript (ES6+), Responsive Design
                   </p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-sm border text-center">
                     <div className="w-12 h-12 mx-auto mb-3">
                       <svg viewBox="0 0 256 250" className="w-full h-full">
-        <path fill="#161614" d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46 6.397 1.185 8.746-2.777 8.746-6.158 0-3.052-.12-13.135-.174-23.83-35.61 7.742-43.124-15.103-43.124-15.103-5.823-14.795-14.213-18.73-14.213-18.73-11.613-7.944.876-7.78.876-7.78 12.853.902 19.621 13.19 19.621 13.19 11.417 19.568 29.945 13.911 37.249 10.64 1.149-8.272 4.466-13.92 8.127-17.116-28.431-3.236-58.318-14.212-58.318-63.258 0-13.975 5-25.394 13.188-34.358-1.329-3.224-5.71-16.242 1.24-33.874 0 0 10.749-3.44 35.21 13.121 10.21-2.836 21.16-4.258 32.038-4.307 10.878.049 21.837 1.47 32.066 4.307 24.431-16.56 35.165-13.12 35.165-13.12 6.967 17.63 2.584 30.65 1.255 33.873 8.207 8.964 13.173 20.383 13.173 34.358 0 49.163-29.944 59.988-58.447 63.157 4.591 3.972 8.682 11.762 8.682 23.704 0 17.126-.148 30.91-.148 35.126 0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002 256 57.307 198.691 0 128.001 0zm-80.06 182.34c-.282.636-1.283.827-2.194.39-.929-.417-1.45-1.284-1.15-1.922.276-.655 1.279-.838 2.205-.399.93.418 1.46 1.293 1.139 1.931zm6.296 5.618c-.61.566-1.804.303-2.614-.591-.837-.892-.994-2.086-.375-2.66.63-.566 1.787-.301 2.626.591.838.903 1 2.088.363 2.66zm4.32 7.188c-.785.545-2.067.034-2.86-1.104-.784-1.138-.784-2.503.017-3.05.795-.547 2.058-.055 2.861 1.075.782 1.157.782 2.522-.019 3.08zm7.304 8.325c-.701.774-2.196.566-3.29-.49-1.119-1.032-1.43-2.496-.726-3.27.71-.776 2.213-.558 3.315.49 1.11 1.03 1.45 2.505.701 3.27zm9.442 2.81c-.31 1.003-1.75 1.459-3.199 1.033-1.448-.439-2.395-1.613-2.103-2.626.301-1.01 1.747-1.484 3.207-1.028 1.446.436 2.396 1.602 2.095 2.622zm10.744 1.193c.036 1.055-1.193 1.93-2.715 1.95-1.53.034-2.769-.82-2.786-1.86 0-1.065 1.202-1.932 2.733-1.958 1.522-.03 2.768.818 2.768 1.868zm10.555-.405c.182 1.03-.875 2.088-2.387 2.37-1.485.271-2.861-.365-3.05-1.386-.184-1.056.893-2.114 2.376-2.387 1.514-.263 2.868.356 3.061 1.403z"/>
-      </svg>
+                      <path fill="#161614" d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46 6.397 1.185 8.746-2.777 8.746-6.158 0-3.052-.12-13.135-.174-23.83-35.61 7.742-43.124-15.103-43.124-15.103-5.823-14.795-14.213-18.73-14.213-18.73-11.613-7.944.876-7.78.876-7.78 12.853.902 19.621 13.19 19.621 13.19 11.417 19.568 29.945 13.911 37.249 10.64 1.149-8.272 4.466-13.92 8.127-17.116-28.431-3.236-58.318-14.212-58.318-63.258 0-13.975 5-25.394 13.188-34.358-1.329-3.224-5.71-16.242 1.24-33.874 0 0 10.749-3.44 35.21 13.121 10.21-2.836 21.16-4.258 32.038-4.307 10.878.049 21.837 1.47 32.066 4.307 24.431-16.56 35.165-13.12 35.165-13.12 6.967 17.63 2.584 30.65 1.255 33.873 8.207 8.964 13.173 20.383 13.173 34.358 0 49.163-29.944 59.988-58.447 63.157 4.591 3.972 8.682 11.762 8.682 23.704 0 17.126-.148 30.91-.148 35.126 0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002 256 57.307 198.691 0 128.001 0zm-80.06 182.34c-.282.636-1.283.827-2.194.39-.929-.417-1.45-1.284-1.15-1.922.276-.655 1.279-.838 2.205-.399.93.418 1.46 1.293 1.139 1.931zm6.296 5.618c-.61.566-1.804.303-2.614-.591-.837-.892-.994-2.086-.375-2.66.63-.566 1.787-.301 2.626.591.838.903 1 2.088.363 2.66zm4.32 7.188c-.785.545-2.067.034-2.86-1.104-.784-1.138-.784-2.503.017-3.05.795-.547 2.058-.055 2.861 1.075.782 1.157.782 2.522-.019 3.08zm7.304 8.325c-.701.774-2.196.566-3.29-.49-1.119-1.032-1.43-2.496-.726-3.27.71-.776 2.213-.558 3.315.49 1.11 1.03 1.45 2.505.701 3.27zm9.442 2.81c-.31 1.003-1.75 1.459-3.199 1.033-1.448-.439-2.395-1.613-2.103-2.626.301-1.01 1.747-1.484 3.207-1.028 1.446.436 2.396 1.602 2.095 2.622zm10.744 1.193c.036 1.055-1.193 1.93-2.715 1.95-1.53.034-2.769-.82-2.786-1.86 0-1.065 1.202-1.932 2.733-1.958 1.522-.03 2.768.818 2.768 1.868zm10.555-.405c.182 1.03-.875 2.088-2.387 2.37-1.485.271-2.861-.365-3.05-1.386-.184-1.056.893-2.114 2.376-2.387 1.514-.263 2.868.356 3.061 1.403z"/>
+                    </svg>
                   </div>
                   <h4 className="font-semibold text-gray-900 mb-2">
                     Git/GitHub
@@ -376,7 +369,7 @@ export default function Home() {
                       </svg>
                   </div>
                   <h4 className="font-semibold text-gray-900 mb-2">
-                    TypeScript (Basic)
+                    TypeScript
                   </h4>
                   <p className="text-sm text-gray-700">
                     Static Typing & Scalable Code
@@ -406,7 +399,7 @@ export default function Home() {
                       </svg>
                   </div>
                   <h4 className="font-semibold text-gray-900 mb-2">
-                    NextJS (Basic)
+                    NextJS
                   </h4>
                   <p className="text-sm text-gray-700">
                     Server-Side Rendering & API Routes
@@ -438,7 +431,7 @@ export default function Home() {
                 <div className="bg-white rounded-lg shadow-md overflow-hidden">
                   <div className="h-48 relative overflow-hidden">
                     <Image
-                      src="/projects/landing-page-clothing.PNG"
+                      src="/projects/street-style.jpg"
                       alt="Style Accord Landing Page Screenshot"
                       fill
                       className="object-cover"
@@ -446,34 +439,40 @@ export default function Home() {
                   </div>
                   <div className="p-6">
                     <h4 className="text-xl font-semibold text-gray-900 mb-2">
-                      Product Landing Page (Style Accord | Clothing Brand)
+                      Street Style (Product Landing Page | Demo)
                     </h4>
                     <p className="text-gray-700 mb-4">
-                      A responsive landing page built with HTML, CSS and
-                      JavaScript featuring modern design principles and smooth
+                      A responsive landing page built with NextJs, Tailwind CSS and
+                      TypeScript featuring modern design principles and smooth
                       animations, showing different products from differnet
                       brands.
                     </p>
                     <div className="flex flex-wrap gap-2 mb-4">
-                      <span className="px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full">
-                        HTML
+                      <span className="px-3 py-1 bg-gray-800 text-gray-100 text-sm rounded-full">
+                        NextJS
+                      </span>
+                      <span className="px-3 py-1 bg-cyan-100 text-cyan-800 text-sm rounded-full">
+                        React
                       </span>
                       <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">
-                        CSS
+                        Tailwind CSS
                       </span>
-                      <span className="px-3 py-1 bg-yellow-100 text-yellow-500 text-sm rounded-full">
-                        JavaScript
+                      <span className="px-3 py-1 bg-blue-800 text-blue-100 text-sm rounded-full">
+                        TypeScript
+                      </span>
+                      <span className="px-3 py-1 bg-gray-900 text-gray-100 text-sm rounded-full">
+                        Vercel
                       </span>
                     </div>
                     <div className="flex space-x-4">
                       <a
-                        href="https://style-accord.netlify.app/"
+                        href="https://street-style-iota.vercel.app/"
                         className="text-blue-600 hover:text-blue-800 font-medium"
                       >
                         View Live →
                       </a>
                       <a
-                        href="https://github.com/AurelGolemi/Product-Landing-Page"
+                        href="https://github.com/AurelGolemi/street-style"
                         className="text-gray-600 hover:text-gray-800 font-medium"
                       >
                         View Code →
