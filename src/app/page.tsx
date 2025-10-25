@@ -312,7 +312,7 @@ export default function Home() {
                   </div>
                   <h4 className="font-semibold text-gray-900 mb-2">Core Web Technologies</h4>
                   <p className="text-sm text-gray-700">
-                    HTML5, CSS3, JavaScript (ES6+), Responsive Design
+                    HTML5, CSS3, JavaScript (ES6+), Responsive Design & Extras (Wordpress + Elementor)
                   </p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-sm border text-center">
