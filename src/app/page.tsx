@@ -534,22 +534,62 @@ export default function Home() {
                     </div>
                   </div>
                   </div>
-                  
+              </div>
+              </div>
+              <div id="projects" className="mb-16">
+              <h3 className="text-2xl font-semibold text-gray-900 mb-8 text-center">
+                Professional Projects (Internship)
+              </h3>
+              <div className="grid md:grid-cols-2 gap-8">    
                 <div className="bg-white rounded-lg shadow-md overflow-hidden">
                   <div className="h-48 relative overflow-hidden">
                     <Image
                       src="/projects/athens-house-of-myths-image.jpeg"
-                      alt="Style Accord Landing Page Screenshot"
+                      alt="Athens House of Myths Screenshot"
                       fill
                       className="object-cover"
                     />
                   </div>
                   <div className="p-6">
                     <h4 className="text-xl font-semibold text-gray-900 mb-2">
-                      Athens House Of Myths (Wordpress | Elementor - Edited)
+                      Athens House Of Myths - Production Website Enhancement (WordPress | Elementor + Custom CSS)
                     </h4>
                     <p className="text-gray-700 mb-4">
-                      Improved site navigation and user experience by linking all pages, and built individual room pages from a master homepage layout using WordPress and Elementor.
+                      Enhanced navigation, page architecture, and user experience during my internship at Leon Architect Group. Implemented custom CSS to extend Elementor styling, improved responsiveness, optimized URL structure, and unified the layout across multiple room pages.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">
+                        WordPress
+                      </span>
+                      <span className="px-3 py-1 bg-pink-100 text-pink-500 text-sm rounded-full">
+                        Elementor
+                      </span>
+                    </div>
+                    <div className="flex space-x-4">
+                      <a
+                        href="https://athenshouseofmyths.com/"
+                        className="text-blue-600 hover:text-blue-800 font-medium"
+                      >
+                        View Live →
+                      </a>
+                    </div>
+                  </div>
+                  </div>
+                  <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                  <div className="h-48 relative overflow-hidden">
+                    <Image
+                      src="/projects/leon-architect-group.webp"
+                      alt="Leon Architect Group Screenshot"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h4 className="text-xl font-semibold text-gray-900 mb-2">
+                      Leon Architect Group – Homepage & Layout Revamp (WordPress | Elementor + Custom Code)
+                    </h4>
+                    <p className="text-gray-700 mb-4">
+                      Enhanced navigation, page architecture, and user experience during my internship at Leon Architect Group. Implemented custom CSS to extend Elementor styling, improved responsiveness, optimized URL structure, and unified the layout across multiple room pages.
                     </p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">
