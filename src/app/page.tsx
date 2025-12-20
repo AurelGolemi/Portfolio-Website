@@ -589,7 +589,7 @@ export default function Home() {
                       Leon Architect Group – Homepage & Layout Revamp (WordPress | Elementor + Custom Code)
                     </h4>
                     <p className="text-gray-700 mb-4">
-                      Enhanced navigation, page architecture, and user experience during my internship at Leon Architect Group. Implemented custom CSS to extend Elementor styling, improved responsiveness, optimized URL structure, and unified the layout across multiple room pages.
+                      Improved the website’s design, structure, and usability during my internship at Leon Architect Group. Refined layouts with Elementor and custom code, corrected URL structure for clarity and SEO, reworked a custom in-house plugin (Vortex), and redesigned the “Είσοδος” access flow using shortcode-based logic. Also created and customized an additional project page while maintaining design consistency across the site.
                     </p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">
