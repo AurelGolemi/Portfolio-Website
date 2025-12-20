@@ -598,6 +598,12 @@ export default function Home() {
                       <span className="px-3 py-1 bg-pink-100 text-pink-500 text-sm rounded-full">
                         Elementor
                       </span>
+                      <span className="px-3 py-1 bg-purple-100 text-purple-500 text-sm rounded-full">
+                        Hostinger
+                      </span>
+                      <span className="px-3 py-1 bg-purple-100 text-purple-500 text-sm rounded-full">
+                        PHP
+                      </span>
                     </div>
                     <div className="flex space-x-4">
                       <a
