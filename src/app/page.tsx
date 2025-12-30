@@ -607,7 +607,7 @@ export default function Home() {
                     </div>
                     <div className="flex space-x-4">
                       <a
-                        href="https://athenshouseofmyths.com/"
+                        href="https://leonarchitectgroup.com/"
                         className="text-blue-600 hover:text-blue-800 font-medium"
                       >
                         View Live →
