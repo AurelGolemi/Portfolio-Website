@@ -463,6 +463,9 @@ export default function Home() {
                       <span className="px-3 py-1 bg-gray-900 text-gray-100 text-sm rounded-full">
                         Vercel
                       </span>
+                      <span className="px-3 py-1 bg-green-900 text-green-100 text-sm rounded-full">
+                        Supabase
+                      </span>
                     </div>
                     <div className="flex space-x-4">
                       <a
