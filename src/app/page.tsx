@@ -23,6 +23,39 @@ export default function Home() {
     console.log("Modal should be open now");
   };
 
+  // Email function
+  const to = "golemiaurel68@gmail.com";
+  const subject = "Hello";
+  const body = "Hi — write your message here";
+
+  const mailto = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const gmailWeb = `https://mail.google.com/mail/?view=cm&to=${encodeURIComponent(to)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const gmailApp = `googlegmail://co?to=${encodeURIComponent(to)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const androidIntent = `intent://compose?to=${encodeURIComponent(to)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}#Intent;scheme=mailto;package=com.google.android.gm;end`;
+  
+  function openEmail() {
+    const ua = navigator.userAgent || "";
+    const isAndroid = /Android/i.test(ua);
+    const isIOS = /iPhone|iPad|iPod/i.test(ua);
+
+    if (isAndroid) {
+      // Try Android intent (prefer Gmail app). Fallback to Gmail web after short delay.
+      window.location.href = androidIntent;
+      setTimeout(() => window.open(gmailWeb, "_blank", "noopener"), 700);
+      return;
+    }
+
+    if (isIOS) {
+      // Try Gmail app scheme; fallback to mailto if app not installed
+      window.location.href = gmailApp;
+      setTimeout(() => (window.location.href = mailto), 700);
+      return;
+    }
+
+    // Desktop: open Gmail web in a new tab
+    window.open(gmailWeb, "_blank", "noopener,noreferrer");
+  }
+
   return (
     <>
       <LoadingScreen />
@@ -999,8 +1032,8 @@ export default function Home() {
                   </li>
                   <li>
                     <a
-                      href="https://mail.google.com/mail/?view=cm&fs=1&to=golemiaurel68@gmail.com"
-                      className="text-gray-300 hover:text-white transition-colors"
+                      onClick={openEmail}
+                      className="text-gray-300 hover:text-white transition-colors cursor-pointer"
                     >
                       Gmail
                     </a>
