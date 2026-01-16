@@ -2,7 +2,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import ContactForm from "./contactForm";
-import LoadingScreen from "./LoadingScreen";
 
 export default function Home() {
   // Function to handle smooth scrolling
@@ -57,8 +56,6 @@ export default function Home() {
   }
 
   return (
-    <>
-      <LoadingScreen />
       <div className="min-h-screen bg-gray-100">
         <header className="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
           <nav className="max-w-6xl mx-auto px-4 md:px-8 py-4">
@@ -130,7 +127,7 @@ export default function Home() {
               </div>
               <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
                 {"Hi, I'm"}{" "}
-                <span className="bg-gradient-to-r from-green-600 to-red-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent">
                   Aurel Golemi
                 </span>
               </h1>
@@ -1144,7 +1141,6 @@ export default function Home() {
           onClose={() => setIsContactModalOpen(false)}
         />
       </div>
-    </>
   );
 }
 
