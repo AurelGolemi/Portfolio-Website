@@ -130,16 +130,16 @@ export default function Home() {
               </div>
               <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
                 {"Hi, I'm"}{" "}
-                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-green-600 to-red-600 bg-clip-text text-transparent">
                   Aurel Golemi
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-                I craft beautiful, functional websites using core & modern
+                I craft functional & responsive websites using core & modern
                 technologies like
-                <span className="font-semibold text-red-600">
+                <span className="font-semibold text-yellow-600">
                   {" "}
-                  HTML, CSS, JavaScript
+                  Core Web Technologies
                 </span>
                 ,<span className="font-semibold text-cyan-500"> React</span> and
                 <span className="font-semibold text-gray-800"> Next</span>
@@ -864,6 +864,86 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
+                  <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div className="h-48 relative overflow-hidden">
+                      <Image
+                        src="/projects/mitriki-agkalia.jpg"
+                        alt="Leon Architect Group Screenshot"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <h4 className="text-xl font-semibold text-gray-900 mb-2">
+                        Mitriki Agkalia
+                      </h4>
+                      <p className="text-gray-700 mb-4">
+                        React-based informational website for a maternal support initiative. The initial structure was generated using Lovable and then fully transitioned into a local development environment. Continued development, customization, and refinement were carried out in VS Code, focusing on component structure, responsive UI, and maintainable front-end architecture.
+                      </p>
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        <span className="px-3 py-1 bg-cyan-100 text-cyan-800 text-sm rounded-full">
+                          React
+                        </span>
+                        <span className="px-3 py-1 bg-blue-800 text-blue-100 text-sm rounded-full">
+                          TypeScript
+                        </span>
+                        <span className="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">
+                          Tailwind CSS
+                        </span>
+                        <span className="px-3 py-1 bg-purple-100 text-purple-500 text-sm rounded-full">
+                          Hostinger
+                        </span>
+                      </div>
+                      <div className="flex space-x-4">
+                        <a
+                          href="https://mitrikiagkalia.gr/"
+                          className="text-blue-600 hover:text-blue-800 font-medium"
+                        >
+                          View Live →
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div className="h-48 relative overflow-hidden">
+                      <Image
+                        src="/projects/bio-resonance.jpeg"
+                        alt="Leon Architect Group Screenshot"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <h4 className="text-xl font-semibold text-gray-900 mb-2">
+                        BioResonance (In Progress)
+                      </h4>
+                      <p className="text-gray-700 mb-4">
+                        React landing website for a bioresonance therapy service. The project was bootstrapped using Lovable and subsequently developed and extended locally using standard front-end tooling. Focused on layout structure, responsive design, and preparing the codebase for future feature expansion and SEO improvements. Deployed on Netlify.
+                      </p>
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        <span className="px-3 py-1 bg-cyan-100 text-cyan-800 text-sm rounded-full">
+                          React
+                        </span>
+                        <span className="px-3 py-1 bg-blue-800 text-blue-100 text-sm rounded-full">
+                          TypeScript
+                        </span>
+                        <span className="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">
+                          Tailwind CSS
+                        </span>
+                        <span className="px-3 py-1 bg-cyan-800 text-cyan-100 text-sm rounded-full">
+                          Netlify
+                        </span>
+                      </div>
+                      <div className="flex space-x-4">
+                        <a
+                          href="https://bioresonance.netlify.app/"
+                          className="text-blue-600 hover:text-blue-800 font-medium"
+                        >
+                          View Live →
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -978,7 +1058,7 @@ export default function Home() {
               <div>
                 <h3 className="text-xl font-semibold mb-4">Aurel Golemi</h3>
                 <p className="text-gray-300">
-                  Web Developer passionate about creating beautiful, functional
+                  Front-End Developer passionate about creating beautiful, functional
                   digital experiences.
                 </p>
               </div>
@@ -1051,7 +1131,7 @@ export default function Home() {
             </div>
             <div className="border-t border-gray-800 pt-8 text-center">
               <p className="text-gray-300">
-                © 2025 Aurel Golemi. All rights reserved.
+                © 2026 Aurel Golemi. All rights reserved.
               </p>
             </div>
           </div>
