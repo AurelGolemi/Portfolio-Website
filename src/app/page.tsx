@@ -135,7 +135,7 @@ export default function Home() {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-                I craft functional & responsive websites using core & modern
+                I develop functional & responsive websites using core & modern
                 technologies like
                 <span className="font-semibold text-yellow-600">
                   {" "}
