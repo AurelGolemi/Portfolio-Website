@@ -197,10 +197,10 @@ export default function Home() {
                 </p>
                 <p className="text-lg leading-relaxed mb-6">
                   I have successfully built several projects including a
-                  comprehensive product landing page and an interactive travel
-                  planner application. These projects taught me the importance
-                  of responsive design, user experience, and writing
-                  maintainable code.
+                  comprehensive product landing page and an interactive daily tracker
+                  application. These projects taught me the importance
+                  of responsive design, user experience, and
+                  developing SEO-friendly applications.
                 </p>
                 <p className="text-lg leading-relaxed">
                   {
@@ -209,8 +209,9 @@ export default function Home() {
                 </p>
               </div>
             </div>
-          </section>
-
+        </section>
+        
+          {/* Introduction Section */}
           <section className="py-20 px-4 md:px-8 bg-gradient-to-br from-purple-50 to-blue-50 relative overflow-hidden">
             {/* Decorative elements */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-blue-200 rounded-full filter blur-3xl opacity-20"></div>
@@ -248,8 +249,8 @@ export default function Home() {
                       Building the web, one component at a time
                     </h2>
                     <p className="text-lg text-gray-600 leading-relaxed">
-                      {`I'm passionate about creating seamless user experiences and writing clean, maintainable code. Currently seeking internship opportunities to grow and 
-            contribute to innovative projects.`}
+                      {`I'm passionate about creating seamless user experiences and high-performance SEO-friendly web applications. Currently seeking job opportunities to grow and 
+                      contribute to innovative projects.`}
                     </p>
                   </div>
 
