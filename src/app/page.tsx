@@ -127,19 +127,19 @@ export default function Home() {
               </div>
               <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
                 {"Hi, I'm"}{" "}
-                <span className="bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent">
+                <span className="bg-clip-text">
                   Aurel Golemi
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-xl md:text-2xl text-gray-900 mb-8 max-w-2xl mx-auto leading-relaxed">
                 I develop functional & responsive websites using core & modern
                 technologies like
-                <span className="font-semibold text-yellow-600">
+                <span className="font-semibold">
                   {" "}
                   Core Web Technologies
                 </span>
-                ,<span className="font-semibold text-cyan-500"> React</span> and
-                <span className="font-semibold text-gray-800"> Next</span>
+                ,<span className="font-semibold"> React</span> and
+                <span className="font-semibold"> Next</span>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
