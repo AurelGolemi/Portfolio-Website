@@ -200,7 +200,7 @@ export default function Home() {
                   comprehensive product landing page and an interactive daily tracker
                   application. These projects taught me the importance
                   of responsive design, user experience, and
-                  developing SEO-friendly applications.
+                  developing performant SEO-friendly applications.
                 </p>
                 <p className="text-lg leading-relaxed">
                   {
@@ -249,7 +249,7 @@ export default function Home() {
                       Building the web, one component at a time
                     </h2>
                     <p className="text-lg text-gray-600 leading-relaxed">
-                      {`I'm passionate about creating seamless user experiences and high-performance SEO-friendly web applications. Currently seeking job opportunities to grow and 
+                      {`I'm passionate about creating seamless user experiences and performant SEO-friendly web applications. Currently seeking job opportunities to grow and 
                       contribute to innovative projects.`}
                     </p>
                   </div>
