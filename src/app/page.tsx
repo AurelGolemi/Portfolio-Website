@@ -266,7 +266,7 @@ export default function Home() {
                       <div className="text-sm text-gray-600">Technologies</div>
                     </div>
                     <div>
-                      <div className="text-3xl font-bold text-red-600">
+                      <div className="text-3xl font-bold text-pink-600">
                         100%
                       </div>
                       <div className="text-sm text-gray-600">Dedication</div>
