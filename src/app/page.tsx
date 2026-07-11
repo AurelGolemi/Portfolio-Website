@@ -1108,11 +1108,11 @@ export default function Home() {
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-200 rounded-full filter blur-3xl opacity-10 animate-blob"></div>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-              {"Let's Work Together"}
+              {"Open to opportunities"}
             </h2>
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
               {
-                "I'm passionate about creating exceptional web experiences and would love to help bring your projects to life. Here's why you should consider working with me:"
+                "I'm actively looking for junior software development and full-stack roles where I can keep building on real problems. If you're hiring, I'd love to talk."
               }
             </p>
 
@@ -1134,11 +1134,10 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Fast Delivery
+                  Full-Stack Range
                 </h3>
                 <p className="text-gray-600">
-                  I work efficiently to deliver high-quality results within
-                  agreed timelines.
+                  Comfortable across the stack — from React and TypeScript on the frontend to PostgreSQL and backend logic — so I can contribute wherever a team needs me.
                 </p>
               </div>
               <div className="text-center">
@@ -1158,11 +1157,10 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Creative Solutions
+                  Fast Learner
                 </h3>
                 <p className="text-gray-600">
-                  I bring fresh prespectives and innovative approaches to every
-                  project.
+                  {`I pick up new tools and codebases quickly, and I'm currently deepening my data structures and algorithms fundamentals to strengthen my problem-solving from the ground up.`}
                 </p>
               </div>
               <div className="text-center">
@@ -1182,11 +1180,10 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Collaborative
+                  Team-Ready
                 </h3>
                 <p className="text-gray-600">
-                  I believe in open communication and working closely with
-                  clients.
+                  Internship experience working within an existing codebase and team, alongside independent projects where I made and owned every technical decision myself.
                 </p>
               </div>
             </div>
